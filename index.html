@@ -35,6 +35,18 @@
         <title>Hello World</title>
     </head>
     <body>
+
+        <!-- make jqueryMobile FOOL -->
+        <div id="hackPage" data-role="page"></div>
+
+        <!-- Templating -->
+        <script type="text/template" id="tpl_page">
+        
+            <div data-role="header">Phonegap : <% print(data) %></div>
+            <div data-role="content">Hello World</div>
+            <div data-role="footer">Modules</div>
+        
+        </script>
         <!--
         <div id="one" data-role="page">
             <div data-role="header">Phonegap : 1</div>

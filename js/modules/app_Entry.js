@@ -52,6 +52,7 @@ requirejs.config({
 		}
 		*/
 		'backbone': {
+			deps: ['jquery'], //necessary to add the dependency here as it makes sure $ is available to BackboneJS
 			exports: 'Backbone',
 			init: function(){
 				console.log('Backbone : loaded : init : ');

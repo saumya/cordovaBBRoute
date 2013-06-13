@@ -20,11 +20,21 @@ define('view/cordovaEntry',
 		        */
 		        //Backbone
 		        //var bbRouter= new BBRouter();
-		        var bbController= new BBController();
-		        //var bb = new BBEntryView();
+		        //var bbController= new BBController();
+		        
+		        this.bbController= new BBController();
+		        this.bbController.on('BBAppController:onCreationComplete',this.onControllerCreationComplete,this);
+		        this.bbController.render();//HACK : common this is a Backbone View, thats why calling render()
 
 		        //this.bindEvents();
 		    },
+		    onControllerCreationComplete: function(){
+		    	console.log('CordovaEntryView : onControllerCreationComplete : ');
+		    	this.bbController.initForApplication();
+		    },
+
+
+
 		    // Bind Event Listeners
 		    //
 		    // Bind any events that are required on startup. Common events are:

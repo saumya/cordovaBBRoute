@@ -14,6 +14,7 @@ define('router/backboneRouter',
 			//Routing functions
 			index: function(){
 				console.log('BBRouter : index : ');
+				this.trigger('BBRouter:index');
 			},
 			homePage: function(){
 				console.log('BBRouter : homePage : ');
